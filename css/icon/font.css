@@ -1,0 +1,237 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/icomoon.eot?1op3uy');
+	src:url('fonts/icomoon.eot?1op3uy#iefix') format('embedded-opentype'),
+		url('fonts/icomoon.ttf?1op3uy') format('truetype'),
+		url('fonts/icomoon.woff?1op3uy') format('woff'),
+		url('fonts/icomoon.svg?1op3uy#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'icomoon' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-question-mark:before {
+	content: "\e90b";
+}
+.icon-trashcan:before {
+	content: "\e804";
+}
+.icon-plus:before {
+	content: "\ea0a";
+}
+.icon-nature:before {
+	content: "\e90c";
+}
+.icon-search:before {
+	content: "\e800";
+}
+.icon-clock:before {
+	content: "\e909";
+}
+.icon-note:before {
+	content: "\e90a";
+}
+.icon-icon-mail:before {
+	content: "\e908";
+}
+.icon-check:before {
+	content: "\e905";
+}
+.icon-chat2:before {
+	content: "\e906";
+}
+.icon-download:before {
+	content: "\e907";
+}
+.icon-talent:before {
+	content: "\e900";
+}
+.icon-invite:before {
+	content: "\e901";
+}
+.icon-message:before {
+	content: "\e902";
+}
+.icon-interesting:before {
+	content: "\e903";
+}
+.icon-job:before {
+	content: "\e904";
+}
+.icon-close:before {
+	content: "\e62d";
+}
+.icon-education:before {
+	content: "\e62f";
+}
+.icon-experience:before {
+	content: "\e630";
+}
+.icon-user-info:before {
+	content: "\e631";
+}
+.icon-lock:before {
+	content: "\e62e";
+}
+.icon-phone:before {
+	content: "\e632";
+}
+.icon-icon_accept:before {
+	content: "\e626";
+}
+.icon-icon_complete:before {
+	content: "\e627";
+}
+.icon-icon_create:before {
+	content: "\e628";
+}
+.icon-icon_fuck_off:before {
+	content: "\e629";
+}
+.icon-icon_hearted:before {
+	content: "\e62a";
+}
+.icon-icon_invited:before {
+	content: "\e62b";
+}
+.icon-icon_progress:before {
+	content: "\e62c";
+}
+.icon-image:before {
+	content: "\e618";
+}
+.icon-smile:before {
+	content: "\e619";
+}
+.icon-icon_archive:before {
+	content: "\e61a";
+}
+.icon-icon_candidate:before {
+	content: "\e61b";
+}
+.icon-icon_check:before {
+	content: "\e61c";
+}
+.icon-icon_chervon_down:before {
+	content: "\e61d";
+}
+.icon-icon_chevron_right:before {
+	content: "\e61e";
+}
+.icon-icon_clock:before {
+	content: "\e61f";
+}
+.icon-icon_cog:before {
+	content: "\e620";
+}
+.icon-icon_heart:before {
+	content: "\e621";
+}
+.icon-icon_location:before {
+	content: "\e622";
+}
+.icon-icon_logout:before {
+	content: "\e623";
+}
+.icon-icon_message:before {
+	content: "\e624";
+}
+.icon-icon_phone:before {
+	content: "\e625";
+}
+.icon-pencil:before {
+	content: "\e803";
+}
+.icon-qq:before {
+	content: "\e801";
+}
+.icon-HomeIcon:before {
+	content: "\e616";
+}
+.icon-ImageIcon:before {
+	content: "\e617";
+}
+.icon-right:before {
+	content: "\e615";
+}
+.icon-add:before {
+	content: "\e614";
+}
+.icon-IconClose:before {
+	content: "\e613";
+}
+.icon-comment:before {
+	content: "\e611";
+}
+.icon-view:before {
+	content: "\e612";
+}
+.icon-pinner:before {
+	content: "\e60e";
+}
+.icon-site:before {
+	content: "\e60f";
+}
+.icon-Location:before {
+	content: "\e60d";
+}
+.icon-Company_Introduction:before {
+	content: "\e602";
+}
+.icon-Alert:before {
+	content: "\e60c";
+}
+.icon-Work_Experience2:before {
+	content: "\e600";
+}
+.icon-Company:before {
+	content: "\e601";
+}
+.icon-Comment:before {
+	content: "\e603";
+}
+.icon-Time:before {
+	content: "\e604";
+}
+.icon-Quit:before {
+	content: "\e605";
+}
+.icon-Like:before {
+	content: "\e606";
+}
+.icon-Salary:before {
+	content: "\e607";
+}
+.icon-Degree:before {
+	content: "\e608";
+}
+.icon-Position:before {
+	content: "\e609";
+}
+.icon-Job_Description:before {
+	content: "\e60a";
+}
+.icon-Position_Highlights:before {
+	content: "\e60b";
+}
+.icon-down:before {
+	content: "\e610";
+}
+.icon-envelope:before {
+	content: "\e802";
+}
+
