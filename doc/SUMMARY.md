@@ -1,5 +1,5 @@
 #ECMAScript 6
-整理：[Alias](http://www.ch-un.com)
+整理：[Lan](http://www.ch-un.com)
 ##目录
 * [前沿](README.md)
 * [let和const命令](letandconst.md)
