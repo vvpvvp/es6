@@ -4,108 +4,30 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
-    <title>ECMAScript 6文档</title>
-    <meta name="keywords" content="ES6,ECMAScript6,javascript,javascript新规范,promise,generator" />
-    <meta name="description" itemprop="description" content="ECMAScript6"/>
-    <meta name="baidu-site-verification" content="PYhQPeGJWB" />
+    <title>book-cli示例</title>
+    <meta name="keywords" content="book, book-cli, doc, example" />
+    <meta name="description" itemprop="description" content="Init html book with markdown files."/>
     <script type="text/javascript" src="js/plugin/jquery.js"></script>
     <script type="text/javascript" src="js/marked.js"></script>
     <script type="text/javascript" src="js/prism.js"></script>
-    <link rel="shortcut icon"  type="image/x-icon" href="images/es6.ico"/>
-    <link rel="Bookmark"  type="image/x-icon"  href="images/es6.ico"/>
-    <link rel="icon"  type="image/x-icon" href="images/es6.ico" />
-    <link rel="stylesheet" href="css/es6Index.css">
-
-    <script type="text/javascript">
-        function getHash() {
-            var hash = window.location.hash||CONFIG.index;
-            return hash.substr(1,hash.length);
-        }
-        var CONFIG = {
-            document_title:"ECMAScript 6文档",
-            content_id:"#content",
-            side_id:"#sidebar",
-
-            // index page
-            index: "#README",
-
-            // sidebar file
-            sidebar_file: "SUMMARY.md",
-
-            // where the docs are actually stored on github - so you can edit
-            base_url: "https://github.com/ruanyf/es6tutorial/edit/gh-pages",
-        };
-        var uyan_config = {
-            'du':'es6.ch-un.com', 
-            'su':getHash()
-        };
-        $(function () {
-            var sidebar = $(CONFIG.side_id);
-            var _content = $(CONFIG.content_id);
-            $.get("doc/"+CONFIG.sidebar_file, function(data){
-                sidebar.html(marked(data));
-                loadContent();
-                $("a",sidebar).on("click",function(event){
-                    var href = $(this).attr("href");
-                    if(href.indexOf("http://")==-1){
-                        event.preventDefault();
-                        window.location.hash = "#" + href.split(".")[0];
-                    }else{
-                        $(this).attr("target","_blank");
-                    }
-                });
-                window.onhashchange = function(){
-                    loadContent();
-                }
-            });
-
-
-            function loadContent() {
-                var page = getHash();
-                $(CONFIG.side_id+" a.selected").removeClass("selected");
-                $(CONFIG.side_id+" a[href='"+page+".md']").addClass("selected");
-
-                $.get("doc/"+page+".md", function(data) {
-                    $(CONFIG.content_id).html(marked(data));
-                    if ("#"+page == CONFIG.index) {
-                      document.title = CONFIG.document_title;
-                    } else {
-                      document.title = $(CONFIG.content_id + " h1").text() + " - " + CONFIG.document_title;
-                    }
-                    // normalize_paths();
-                    // create_page_anchors();
-
-                    // 完成代码高亮
-                    $('#content code').map(function() {
-                      Prism.highlightElement(this);
-                    });
-                    $(window).scrollTop(0);
-                    // $("h2[id]",_content).each(function(i,n) {
-                    //     $(n).wrap("<a href='#"+n.id+"'></a>");
-                    // })
-                    // var iframe = $("#uyan_frame iframe").get(0);
-                    // if(iframe){
-                    //     iframe.src = iframe.src.replace("&su="+uyan_config.su+"&","&su="+page+"&");
-                    //     uyan_config.su = page;
-                    // }
-                });
-            }
-
-        });
-    </script>
-
+    <script type="text/javascript" src="config.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <link rel="icon"  type="image/x-icon" href="images/logo.ico" />
+    <link rel="stylesheet" href="css/prism.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
-    <div id="sidebar">
-        <h1>ECMAScript 6文档</h1>
+    <div id="book_header">
+        <a href="/"><h1 class="title"></h1></a>
+        <a class="book-header-github" target="_blank"><i class="h-icon-github"></i></a>
     </div>
-    <div id="content">
-        
+    <div id="book_sidebar">
     </div>
-    <!-- UY BEGIN -->
-    <!-- <div id="uyan_frame"></div>
-    <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2081978" id="uyan_id"></script> -->
-    <!-- UY END -->
+    <div id="book_content">
+    </div>
+    <div class="book-backtop">
+        <i class="h-icon-top"></i>
+    </div>
 </body>
 </html>

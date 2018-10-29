@@ -1,6 +1,4 @@
-#ECMAScript 6
-整理：[Lan](http://www.ch-un.com)
-##目录
+
 * [前沿](README.md)
 * [let和const命令](letandconst.md)
 * [关于...参数](rest.md)
@@ -14,9 +12,11 @@
 * [Iterator和for...of循环](iterator.md)
 * [Generator和Promise](generator.md)
 * [异步操作和Async函数](async.md)
-* [Proxy和Reflect](proxymd.md)
+* [Proxy和Reflect](proxy.md)
 * [Symbol](symbolmd.md)
 * [Class](classmd.md)
 * [Module](modulemd.md)
 * [参考](frommd.md)
 
+# 
+整理：[Lan](http://www.ch-un.com)
