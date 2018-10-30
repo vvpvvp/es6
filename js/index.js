@@ -1,5 +1,7 @@
+var indexHash = "#" + (CONFIG.index || '').split(".")[0];
+
 function getHash() {
-  var hash = window.location.hash || CONFIG.index;
+  var hash = window.location.hash || indexHash;
   return hash.substr(1, hash.length);
 }
 function updateHash(content) {
@@ -31,7 +33,7 @@ $(function () {
     loadContent();
     $("a", _sidebar).on("click", function (event) {
       var href = $(this).attr("href");
-      if (href.indexOf("http://") == -1) {
+      if (href.indexOf("http://") == -1 && href.indexOf('.md') > 0) {
         event.preventDefault();
         window.location.hash = "#" + href.split(".")[0];
       } else {
@@ -56,6 +58,8 @@ $(function () {
     $("a.selected", _sidebar).removeClass("selected");
     var nowLink = $("a[href='" + page + ".md']", _sidebar);
     nowLink.addClass("selected");
+
+    $(_content).html("<div class='book-content-loading'><i class='book-icon-loading'></i></div>");
 
     $.get("docs/" + page + ".md", function (data) {
       $(_content).html(marked(data));
@@ -92,11 +96,11 @@ $(function () {
         var footer = $('<div class="book-footer"></div>');
         if(nowLinkIndex > 0) {
           var dom = $(as[nowLinkIndex-1]);
-          footer.append('<a class="book-footer-prev-link" href="#'+dom.attr('href').split(".")[0]+'"><i class="h-icon-left"></i> '+dom.text()+'</a>');
+          footer.append('<a class="book-footer-prev-link" href="#'+dom.attr('href').split(".")[0]+'"><i class="book-icon-left"></i> '+dom.text()+'</a>');
         }
         if(nowLinkIndex < as.length - 1) {
           var dom = $(as[nowLinkIndex+1]);
-          footer.append('<a class="book-footer-next-link" href="#'+dom.attr('href').split(".")[0]+'">'+dom.text()+' <i class="h-icon-right"></i></a>');
+          footer.append('<a class="book-footer-next-link" href="#'+dom.attr('href').split(".")[0]+'">'+dom.text()+' <i class="book-icon-right"></i></a>');
         }
         _content.append(footer);
       }
